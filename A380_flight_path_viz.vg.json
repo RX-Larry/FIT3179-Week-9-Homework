@@ -69,7 +69,7 @@
                 "url": "data/airports.csv"
               },
               "key": "iata",
-              "fields": ["latitude", "logitude"]
+              "fields": ["latitude", "longitude"]
             },
             "as": ["destination_latitude", "destination_longitude"]
           }
