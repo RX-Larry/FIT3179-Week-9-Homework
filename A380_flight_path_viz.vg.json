@@ -36,7 +36,7 @@
             "field": "latitude", 
             "type": "quantitative"
           },
-          "size": {"value": 20},
+          "size": {"value": 30},
           "color": {"value": "red"},
           "tooltip": [
             {"field": "name", "type": "nominal"},
@@ -88,7 +88,12 @@
             "type": "quantitative"
           },
           "longitude2": {"field": "destination_longitude"},
-          "latitude2": {"field": "destination_latitude"}
+          "latitude2": {"field": "destination_latitude"},
+          "size": {"value": 1},
+          "tooltip": [
+            {"field": "origin", "type": "nominal"},
+            {"field": "destination", "type": "nominal"}
+          ]
         }
       }
     ]
