@@ -45,6 +45,51 @@
             {"field": "iata", "type": "nominal"}
           ]
         }
+      },
+      {
+        "data": {
+          "url": "data/flights-airport.csv"
+        },
+        "transform": [
+          {
+            "lookup": "origin",
+            "from": {
+              "data": {
+                "url": "data/airports.csv"
+              },
+              "key": "iata",
+              "fields": ["latitude", "longitude"]
+            },
+            "as": ["origin_latitude", "origin_longitude"]
+          },
+          {
+            "lookup": "destination",
+            "from": {
+              "data": {
+                "url": "data/airports.csv"
+              },
+              "key": "iata",
+              "fields": ["latitude", "logitude"]
+            },
+            "as": ["destination_latitude", "destination_longitude"]
+          }
+        ],
+        "projection": {
+          "type": "equirectangular"
+        },
+        "mark": "rule",
+        "encoding": {
+          "longitude": {
+            "field": "origin_longitude",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "origin_latitude",
+            "type": "quantitative"
+          },
+          "longitude2": {"field": "destination_longitude"},
+          "latitude2": {"field": "destination_latitude"}
+        }
       }
     ]
   }
