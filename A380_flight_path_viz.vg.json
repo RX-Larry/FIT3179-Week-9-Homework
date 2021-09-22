@@ -3,7 +3,6 @@
     "width": 800,
     "height": 400,
     "projection": {"type": "naturalEarth1"},
-    "background":"#c9e4fb",
     "layer": [
       {
         "data": {
