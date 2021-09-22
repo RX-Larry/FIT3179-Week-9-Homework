@@ -22,32 +22,6 @@
       },
       {
         "data": {
-          "url": "data/airports.csv"
-        },
-        "mark": {
-            "type": "circle"
-        },
-        "encoding": {
-          "longitude": {
-            "field": "longitude", 
-            "type": "quantitative"
-          },
-          "latitude": {
-            "field": "latitude", 
-            "type": "quantitative"
-          },
-          "size": {"value": 30},
-          "color": {"value": "red"},
-          "tooltip": [
-            {"field": "name", "type": "nominal"},
-            {"field": "city", "type": "nominal"},
-            {"field": "country", "type": "nominal"},
-            {"field": "iata", "type": "nominal"}
-          ]
-        }
-      },
-      {
-        "data": {
           "url": "data/flights-airport.csv"
         },
         "transform": [
@@ -93,6 +67,32 @@
           "tooltip": [
             {"field": "origin", "type": "nominal"},
             {"field": "destination", "type": "nominal"}
+          ]
+        }
+      },
+      {
+        "data": {
+          "url": "data/airports.csv"
+        },
+        "mark": {
+            "type": "circle"
+        },
+        "encoding": {
+          "longitude": {
+            "field": "longitude", 
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "latitude", 
+            "type": "quantitative"
+          },
+          "size": {"value": 30},
+          "color": {"value": "red"},
+          "tooltip": [
+            {"field": "name", "type": "nominal"},
+            {"field": "city", "type": "nominal"},
+            {"field": "country", "type": "nominal"},
+            {"field": "iata", "type": "nominal"}
           ]
         }
       }
