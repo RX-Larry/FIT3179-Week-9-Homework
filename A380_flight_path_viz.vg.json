@@ -20,57 +20,6 @@
       },
       {
         "data": {
-          "url": "data/flights-airport.csv"
-        },
-        "transform": [
-          {
-            "lookup": "origin",
-            "from": {
-              "data": {
-                "url": "data/airports.csv"
-              },
-              "key": "iata",
-              "fields": ["latitude", "longitude"]
-            },
-            "as": ["origin_latitude", "origin_longitude"]
-          },
-          {
-            "lookup": "destination",
-            "from": {
-              "data": {
-                "url": "data/airports.csv"
-              },
-              "key": "iata",
-              "fields": ["latitude", "longitude"]
-            },
-            "as": ["destination_latitude", "destination_longitude"]
-          }
-        ],
-        "projection": {
-          "type": "naturalEarth1"
-        },
-        "mark": "rule",
-        "encoding": {
-          "longitude": {
-            "field": "origin_longitude",
-            "type": "quantitative"
-          },
-          "latitude": {
-            "field": "origin_latitude",
-            "type": "quantitative"
-          },
-          "longitude2": {"field": "destination_longitude"},
-          "latitude2": {"field": "destination_latitude"},
-          "size": {"value": 1},
-          "color": {"value": "red"},
-          "tooltip": [
-            {"field": "origin", "type": "nominal"},
-            {"field": "destination", "type": "nominal"}
-          ]
-        }
-      },
-      {
-        "data": {
           "url": "data/airports.csv"
         },
         "mark": {
