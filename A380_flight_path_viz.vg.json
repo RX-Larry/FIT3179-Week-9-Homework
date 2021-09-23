@@ -3,6 +3,7 @@
     "width": 800,
     "height": 400,
     "projection": {"type": "naturalEarth1"},
+    "background":"#c9e4fb",
     "layer": [
       {
         "data": {
@@ -34,7 +35,7 @@
             "field": "latitude", 
             "type": "quantitative"
           },
-          "size": {"value": 30},
+          "size": {"value": 15},
           "color": {"value": "black"},
           "tooltip": [
             {"field": "name", "type": "nominal"},
